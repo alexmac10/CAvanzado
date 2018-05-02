@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Serializacionbinaria
+namespace SerializacionXML
 {
     [Serializable]
-    class CCPU
+    public class CCPU
     {
         private string procesador;
         private int memoria;
@@ -33,7 +33,7 @@ namespace Serializacionbinaria
         public string Procesador
         {
             get { return this.procesador; }
-            set { this.procesador = value;}
+            set { this.procesador = value; }
         }
 
         public int Memoria
@@ -50,7 +50,7 @@ namespace Serializacionbinaria
 
         public override string ToString()
         {
-            return string.Format("CPU - {0}, {1} GB de memoria, {2} GB de HD", this.procesador, this.memoria, this.discoDuro);            
+            return string.Format("CPU - {0}, {1} GB de memoria, {2} GB de HD", this.procesador, this.memoria, this.discoDuro);
         }
     }
 }

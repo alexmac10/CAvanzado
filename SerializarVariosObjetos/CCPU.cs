@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Serializacionbinaria
+namespace SerializarVariosObjetos
 {
     [Serializable]
-    class CCPU
+    public class CCPU
     {
         private string procesador;
         private int memoria;

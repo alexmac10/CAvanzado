@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Serializacionbinaria
+namespace SerializacionBinariaCompuesta
 {
     class Program
     {
@@ -17,12 +17,13 @@ namespace Serializacionbinaria
             Console.WriteLine("1.- Salvar objeto, 2.- leer objeto");
             opcion = Console.ReadLine();
 
-            if(opcion == "1")
+            if (opcion == "1")
             {
-                CCPU miCPU = new CCPU("i5",4,180.5);
+                CCompu miCompu = new CCompu(24,"i7", 4, 1000);
+                Console.WriteLine("Salvando el objeto");
                 BinaryFormatter formateador = new BinaryFormatter();
-                Stream miStream = new FileStream("miCPU.cpu", FileMode.Create, FileAccess.Write, FileShare.None);
-                formateador.Serialize(miStream,miCPU);
+                Stream miStream = new FileStream("miCompu.cmp", FileMode.Create, FileAccess.Write, FileShare.None);
+                formateador.Serialize(miStream, miCompu);
                 miStream.Close();
             }
 
@@ -30,10 +31,10 @@ namespace Serializacionbinaria
             {
                 Console.WriteLine("Leyendo el objeto");
                 BinaryFormatter formateador = new BinaryFormatter();
-                Stream miStream = new FileStream("miCPU.cpu", FileMode.Open, FileAccess.Read, FileShare.None);
-                CCPU miCPU2 = (CCPU) formateador.Deserialize(miStream);
+                Stream miStream = new FileStream("miCompu.cmp", FileMode.Open, FileAccess.Read, FileShare.None);
+                CCompu miCompu2 = (CCompu)formateador.Deserialize(miStream);
                 miStream.Close();
-                Console.WriteLine(miCPU2.ToString());
+                Console.WriteLine(miCompu2.ToString());
             }
         }
     }

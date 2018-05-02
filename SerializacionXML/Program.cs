@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-namespace Serializacionbinaria
+namespace SerializacionXML
 {
     class Program
     {
@@ -17,24 +17,25 @@ namespace Serializacionbinaria
             Console.WriteLine("1.- Salvar objeto, 2.- leer objeto");
             opcion = Console.ReadLine();
 
-            if(opcion == "1")
+            if (opcion == "1")
             {
-                CCPU miCPU = new CCPU("i5",4,180.5);
-                BinaryFormatter formateador = new BinaryFormatter();
+                CCPU miCPU = new CCPU("i5", 4, 180.5);
+                XmlSerializer formateador = new XmlSerializer(typeof(CCPU));
                 Stream miStream = new FileStream("miCPU.cpu", FileMode.Create, FileAccess.Write, FileShare.None);
-                formateador.Serialize(miStream,miCPU);
+                formateador.Serialize(miStream, miCPU);
                 miStream.Close();
             }
 
             if (opcion == "2")
             {
                 Console.WriteLine("Leyendo el objeto");
-                BinaryFormatter formateador = new BinaryFormatter();
+                XmlSerializer formateador = new XmlSerializer(typeof(CCPU));
                 Stream miStream = new FileStream("miCPU.cpu", FileMode.Open, FileAccess.Read, FileShare.None);
-                CCPU miCPU2 = (CCPU) formateador.Deserialize(miStream);
+                CCPU miCPU2 = (CCPU)formateador.Deserialize(miStream);
                 miStream.Close();
                 Console.WriteLine(miCPU2.ToString());
             }
+
         }
     }
 }
