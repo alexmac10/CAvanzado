@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFDockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDockPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Border Background="AliceBlue" DockPanel.Dock="top">
+            <TextBlock Text="Hola"/>
+        </Border>
+        <Border Background="AntiqueWhite" DockPanel.Dock="Left">
+            <TextBlock Text="Mundo"/>
+        </Border>
+        <Border Background="Aqua" DockPanel.Dock="Bottom">
+            <TextBlock Text="Hello"/>
+        </Border>
+        <Border Background="Aquamarine" DockPanel.Dock="Left">
+            <TextBlock Text="World"/>
+        </Border>
+        <Border Background="Azure" DockPanel.Dock="top">
+            <TextBlock Text="--Hola--"/>
+        </Border>
+        <Border Background="Beige" DockPanel.Dock="Left">
+            <TextBlock Text="--Mundo--"/>
+        </Border>
+    </DockPanel>
+</Window>
