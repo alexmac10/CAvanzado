@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPFMarcosBorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMarcosBorder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1092" Width="525">
+    <ScrollViewer>
+        <StackPanel>
+            <Border Width="150" Height="100" Background="IndianRed" Margin="25,25,25,25">
+                <Border.Effect>
+                    <DropShadowEffect 
+                        BlurRadius="10" 
+                        Color="Blue" 
+                        Direction="220" 
+                        Opacity="0.5" 
+                        RenderingBias="Quality" 
+                        ShadowDepth="10"/>
+                </Border.Effect>
+                <TextBlock Text="Sombra" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFExpander", "WPFExpander\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPrimeraAplicacion", "WPFPrimeraAplicacion\WPFPrimeraAplicacion.csproj", "{29696300-9957-4621-8732-AD4549C66D9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFEfectosBoreder", "WPFEfectosBoreder\WPFEfectosBoreder.csproj", "{562CDA49-8C94-4EDB-AF10-5F36DD53E820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMarcosBorder", "WPFMarcosBorder\WPFMarcosBorder.csproj", "{B69E9288-544C-44CB-BB38-E5BB858B951F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{29696300-9957-4621-8732-AD4549C66D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29696300-9957-4621-8732-AD4549C66D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29696300-9957-4621-8732-AD4549C66D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562CDA49-8C94-4EDB-AF10-5F36DD53E820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562CDA49-8C94-4EDB-AF10-5F36DD53E820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562CDA49-8C94-4EDB-AF10-5F36DD53E820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562CDA49-8C94-4EDB-AF10-5F36DD53E820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69E9288-544C-44CB-BB38-E5BB858B951F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69E9288-544C-44CB-BB38-E5BB858B951F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69E9288-544C-44CB-BB38-E5BB858B951F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69E9288-544C-44CB-BB38-E5BB858B951F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
